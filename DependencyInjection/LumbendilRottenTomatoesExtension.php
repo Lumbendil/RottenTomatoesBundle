@@ -23,5 +23,7 @@ class LumbendilRottenTomatoesExtension extends Extension
     {
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
+
+        $container->setParameter('lumbendil_rotten_tomatoes.api_key', $configs['api_key']);
     }
 }

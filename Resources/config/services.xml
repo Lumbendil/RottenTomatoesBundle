@@ -9,6 +9,10 @@
     </parameters>
 
     <services>
-        <service id="lumbendil_rotten_tomatoes.client" class="%lumbendil_rotten_tomatoes.client.class%" />
+        <service id="lumbendil_rotten_tomatoes.client" class="%lumbendil_rotten_tomatoes.client.class%">
+            <argument type="collection">
+                <argument key="apikey">%lumbendil_rotten_tomatoes.api_key%</argument>
+            </argument>
+        </service>
     </services>
 </container>
